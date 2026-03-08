@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased transition-colors duration-300;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 inline-flex items-center gap-2;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-900/60 border border-slate-200/70 dark:border-slate-700/60 rounded-xl shadow-lg;
+  }
+
+  .student-h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .student-h2 {
+    @apply text-xl sm:text-2xl font-semibold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .student-body {
+    @apply text-base sm:text-lg text-slate-700 dark:text-slate-200;
+  }
+}
